@@ -1,0 +1,54 @@
+@media screen and (max-width:600px) {
+
+    .header-right{
+        display: none;
+    }
+
+    .header-menu{
+        display: flex;
+        align-items: center;
+    }
+
+    .popup-menubar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    .popup-menubar ul{
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-top: 80px;
+    }
+
+    .popup-menubar ul a{
+        font-weight: 500;
+        text-decoration: none;
+        margin: 20px 0px;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .popup-close{
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-close a{
+        color: white;
+        font-size: 1.8rem;
+    }
+}
