@@ -1,0 +1,117 @@
+Hi, here is Complete React Roadmap..
+
+We have created a new Repo in for this roadmap..
+then into vs code..
+first we open a terminal and then to create our react app we type our fiest command..
+=>npx create-react-app "filename"
+
+<!-- ***************************************** -->
+
+* install following packages..
+=> npm i react-router-dom
+=> npm i react-hot-toast
+=> npm i axios
+
+* "npm start" command to start our app..
+
+<!-- ***************************************** -->
+
+* useNavigate is Hook which we use to route from one page to another without refreshing our website..
+
+<!-- ***************************************** -->
+
+* useEffect Hook is used to do particular code at a particular time.. there are 4types of useEffect:
+No Dependency; Empty Dependency; Single Dependency; Multiple Depenedency..
+
+for example:
+* type 1 No Dependency => 
+
+useEffect(()=>{
+    alert('hi no dependency')
+})
+
+In this effect page will alert on every changes which will happen in website..
+for ex: alert on every counter
+
+<!-- ***************************************** -->
+* type 2 Empty Dependency=>
+ 
+useEffect(()=>{
+    alert('hi from empty dependency')
+}, [])
+
+In this effect page will alert on first page hitting and after every hard refresh..
+for ex: alert on only first page hitting time or hard refresh
+
+<!-- ***************************************** -->
+* type 3 Single Dependency =>
+
+useEffect(()=>{
+    alert('this alert occured due to single dependency counter')
+}, [counter])
+
+for ex:
+alert on first refresh and every counter change.. and hard refresh..
+
+<!-- ***************************************** -->
+* type 4 Multi Dependency =>
+
+useEffect(()=>{
+    alert('this alert occured due to single dependency counter')
+}, [counter1, counter2])
+
+for ex:
+alert on first refresh and every counter change.. and hard refresh..
+
+<!--*****************************************-->
+
+params are basically used while creating products page single product page like functinality
+where when you you have 4 products or n no of products and when you click on any one product that particular prodcuts should open in new tab..
+
+* main component code:
+route '/mainproduct
+
+in main route w will route single pro link 
+'/single-pro/1234' here id is replaced by static value 1234 
+
+* single component code:
+route'/single-pro/:id
+
+* in component - 
+when you replace ':id' in main product page we can call it using useParams() 
+const { id } = useParams();
+
+
+<!-- ***************************** -->
+functional based component apna normal apan joh use krte hai..
+
+second is class based components..
+
+why all r ignoring class based component becoz in class based we cannot use hook method..
+<!-- ***************************** -->
+
+
+all products component..
+
+we fetch our all prodcuts data from a randoem fake site for example ..
+so we willl first run async function get products 
+inside this fucntion we will store the data with the help of get method 
+
+and this fucntion will run on every render cause we will use empty useeffect method..
+so that incase in future some new data are  added it will also get displayed because we are using method on every refresh 
+
+once we get data we will store in set usestate method and then we will map product..
+
+* While products mapping=>
+
+We will use Params method in all products cmponent we will just pass route to our child div were we are mapping single products 
+
+below onclick code is very important it will help to go to each individual product..
+
+* onClick={()=>route(`/single-product/${product.id}`)} *
+
+<div key={i} className='allproducts-child' onClick={()=>route(`/single-product/${product.id}`)}>
+    <h2>{product.title}</h2>
+    <p>{product.description}</p>
+    <a>{product.price}</a>
+</div>

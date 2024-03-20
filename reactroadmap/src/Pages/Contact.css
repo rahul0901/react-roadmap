@@ -1,0 +1,90 @@
+.screen-contact {
+    width: 100%;
+    /* background-color: rgb(158, 219, 236); */
+}
+
+.contact-parent {
+    width: 95%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    /* padding-top: 20px; */
+}
+
+.contact-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    background-image: url('https://img.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-banner-void {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.contact-banner-content {
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.contact-banner-content form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.contact-banner-content form>input:nth-child(1), input:nth-child(2) {
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 1px solid;
+    outline: none;
+    padding-left: 6px;
+    display: flex;
+}
+
+.contact-banner-content form>input:nth-child(3) {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: dodgerblue;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-banner-signup {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.contact-banner-signup p:nth-child(2){
+    text-decoration: underline;
+    cursor: pointer;
+}
