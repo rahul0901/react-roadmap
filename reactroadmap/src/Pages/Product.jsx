@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -14,14 +14,14 @@ const Products = () => {
             try {
 
                 // const json = await axios.get('https://api.escuelajs.co/api/v1/products');
-                const response = await axios.get('http://localhost:8000/api/v1/products/get-all-products')
+                const { data } = await axios.get('http://localhost:8000/api/v1/products/get-all-products')
 
-                if (response.data.success) {
-                    setProducts(response.data.product)
+                if (data.success) {
+                    setProducts(data.product);
                 }
 
             } catch (error) {
-                toast.error(error.response.data.message);
+                toast.error(error.data.message);
             }
 
         }
